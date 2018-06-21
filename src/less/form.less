@@ -1,0 +1,31 @@
+.form {
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 50px 0;
+
+  input {
+    border: 1px solid @light-grey;
+    border-radius: 6px;
+    padding: 15px;
+  }
+
+  input:focus {
+    border: 1px solid @green;
+    outline: none;
+  }
+
+  .submit {
+    display: block;
+    margin: 0 auto;
+    color: tomato;
+    border-color: tomato;
+    background-color: @white;
+    text-transform: uppercase;
+    &:hover {
+      transition: 0.3s background-color ease-in-out;
+      background-color: tomato;
+      color: @white;
+      cursor: pointer;
+    }
+  }
+}
