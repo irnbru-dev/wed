@@ -1,17 +1,22 @@
 .form {
   text-align: center;
-  background-color: #f0f0f0;
-  padding: 50px 0;
+  background-color: @light-grey;
+  padding: 5em 0;
 
-  input {
+  input, textarea {
     border: 1px solid @light-grey;
     border-radius: 6px;
     padding: 15px;
   }
 
-  input:focus {
+  input:focus, textarea:focus {
     border: 1px solid @green;
     outline: none;
+  }
+
+  textarea {
+    display: block;
+    margin: 0 auto;
   }
 
   .submit {

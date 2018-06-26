@@ -1,3 +1,31 @@
 .date {
   text-align: center;
+  padding: 5em 0;
+
+  &__date {
+    position: relative;
+    font-size: 3em;
+    display: inline-block;
+    border: 4px dashed;
+    padding: 0.25em;
+    margin: 0.5em;
+    &:hover {
+      border-color: yellow;
+      transition: all .3s ease-out;
+    }
+
+    span {
+      display: none;
+    }
+
+    &:hover span {
+      transition: all .3s ease-out;
+      display: inline-block;
+      position: absolute;
+      right: -110px;
+      top: -30px;
+      color: yellow;
+      transform: rotate(30deg);
+    }
+  }
 }
