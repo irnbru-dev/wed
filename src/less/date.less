@@ -4,7 +4,7 @@
 
   &__date {
     position: relative;
-    font-size: 3em;
+    font-size: 2.6em;
     display: inline-block;
     border: 4px dashed;
     padding: 0.25em;
@@ -26,6 +26,12 @@
       top: -30px;
       color: yellow;
       transform: rotate(30deg);
+    }
+
+    @media (max-width: 991px) {
+      &:hover span {
+        display: none;
+      }
     }
   }
 }

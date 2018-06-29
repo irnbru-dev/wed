@@ -5,7 +5,8 @@
     <title>wed</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700&amp;subset=cyrillic,cyrillic-ext"
           rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="dist/svg/css/sprite.css">
     <link rel="stylesheet" href="dist/css/style.min.css">
 </head>
@@ -15,12 +16,12 @@
     <div class="container">
         <div class="main-wrap">
             <h1>мы женимся <span>вы смотрите</span></h1>
-            <a href="#" class="btn">мм?</a>
+            <a href="#date" class="btn scrollBtn">мм?</a>
         </div>
     </div>
 </section>
 
-<section class="date">
+<section class="date" id="date">
     <div class="container">
         <h2>SAFE THE DATE</h2>
         <p class="date__date">18 СЕНТЯБРЯ
@@ -31,12 +32,68 @@
     </div>
 </section>
 
+<section class="schedule">
+    <div class="container">
+        <div class="border">
+            <h2>Инфа . расписание</h2>
+            <ul>
+                <li>12:30 собираемся у здания</li>
+                <li>12:50 заходим в зал</li>
+                <li><b>13:00 начало церемонии</b></li>
+                <li>13:30 окончание церемонии, всем шампанского !</li>
+                <li>14:00 по машинам и перемещаемся в <a href="#">Charlie</a></li>
+                <li>15:00 - 18:00 банкет</li>
+            </ul>
+        </div>
+
+        <div class="bike">
+            <div class="frame">
+                <div class="frame one"></div>
+                <div class="frame two"></div>
+                <div class="frame three"></div>
+                <div class="frame four"></div>
+                <div class="frame five"></div>
+                <div class="frame six"></div>
+                <div class="frame seat"></div>
+                <div class="frame pedal"></div>
+                <div class="frame handle"></div>
+            </div>
+            <div class="wheel">
+                <div class="wheel left">
+                    <div class="spokes">
+                        <div class="spoke"></div>
+                        <div class="spoke"></div>
+                        <div class="spoke"></div>
+                        <div class="spoke"></div>
+                        <div class="spoke"></div>
+                        <div class="spoke"></div>
+                    </div>
+                </div>
+                <div class="wheel right">
+                    <div class="spokes">
+                        <div class="spoke"></div>
+                        <div class="spoke"></div>
+                        <div class="spoke"></div>
+                        <div class="spoke"></div>
+                        <div class="spoke"></div>
+                        <div class="spoke"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 <section class="form">
     <div class="container">
         <form action="">
-            <label>Имя<input></label>
-            <label>Тел<input></label>
-            <label><textarea placeholder="Мессадж"></textarea></label>
+            <label for="name">Имя<sup>*</sup></label>
+            <input id="name" required>
+            <label for="tel">Тел<sup>*</sup></label>
+            <input id="tel" required>
+            <label for="message"></label>
+            <textarea placeholder="Мессадж" id="message"></textarea>
             <input type="submit" value="Я буду!" class="submit">
         </form>
     </div>
@@ -53,6 +110,7 @@
     </div>
 </section>
 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="dist/js/script.min.js"></script>
 </body>
 </html>
