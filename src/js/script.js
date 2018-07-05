@@ -10,3 +10,14 @@ $(function () {
         e.preventDefault();
     });
 });
+
+// $(function () {
+//     $("#bike").on('animationiteration', function () {
+//         $(this).toggleClass('back');
+//         console.log(1)
+//     });
+// });
+
+$(function () {
+    new WOW().init();
+});

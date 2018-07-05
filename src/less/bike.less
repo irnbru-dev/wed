@@ -1,7 +1,12 @@
-
-
 .bike {
   transform: scale(0.3);
+  position: relative;
+  top: -65px;
+  //animation: go-left-right 3s infinite ;
+
+  &.back {
+    transform: scale(-0.3, 0.3);
+  }
 
   @media (max-width:991px) {
     display: none;
@@ -188,7 +193,7 @@
   top: 0;
   width: inherit;
   height: inherit;
-  background: #fff;
+  background: #f0f0f0;
   &:nth-child(1) {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -269,5 +274,14 @@
   100% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
+  }
+}
+
+@keyframes go-left-right {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 200px;
   }
 }
