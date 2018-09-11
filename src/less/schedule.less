@@ -1,7 +1,6 @@
 .schedule {
+  background: @white;
   text-align: center;
-  //padding-bottom: 5em;
-  background: url(../../src/img/pions-2.jpg) repeat;
 
   ul li {
     padding: 5px;
@@ -13,30 +12,13 @@
     background-color: #fff;
     padding: 50px;
     position: relative;
-    z-index: 1;
+    //z-index: 1;
 
     &:hover {
       transition: all .3s;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      //background-image: url(../../src/img/pions.jpg);
+      //box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border: 5px solid @black;
+      box-shadow: rgb(176, 126, 197) -10px 10px 0px;
     }
-
-    //&::before {
-    //  content: "";
-    //  position: absolute;
-    //  top: 0;
-    //  left: 0;
-    //  width: 100%;
-    //  height: 100%;
-    //  opacity: 0;
-    //  z-index: -1;
-    //  background-size: cover;
-    //
-    //}
-    //
-    //&:hover::before {
-    //  transition: opacity .7s;
-    //  opacity: .1;
-    //}
   }
 }

@@ -19,3 +19,36 @@ ul {
   list-style: none;
   padding: 0;
 }
+
+.pad--footerOffset {
+  position: relative;
+  margin-bottom: 450px;
+}
+
+.wrapper {
+  z-index: 1;
+}
+
+.heart {
+  animation: pulse 5s infinite linear;
+}
+
+// TODO: animation: beat 2s infinite;
+//@keyframes beat {
+//  0% {
+//    transform: scale(1);
+//  }
+//  50% {
+//    transform: scale(0.6);
+//  }
+//}
+
+// TODO: animation: pulse 5s infinite linear;
+@keyframes pulse {
+  0%{ transform: scale(1);}
+  90%{ transform: scale(1); }
+  92%{ transform: scale(1.8); }
+  94%{ transform: scale(1);}
+  96%{ transform: scale(1.8);}
+  100%{ transform: scale(1);}
+}
