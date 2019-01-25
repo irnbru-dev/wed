@@ -50,7 +50,7 @@
       z-index: -5;
     }
 
-    &:hover {
+    &.vzhux {
       transition: box-shadow linear 0.2s;
       text-decoration: none;
     }
@@ -63,8 +63,8 @@
       transition-delay: 0.1s;
     }
 
-    &:hover:after,
-    &:hover:before {
+    &.vzhux:after,
+    &.vzhux:before {
       content: '';
       position: absolute;
       top: 0;
@@ -77,22 +77,33 @@
       z-index: -5;
     }
 
-    &:hover:after {
+    &.vzhux:after {
       transform: rotate(60deg) translateX(0);
     }
 
-    &:hover:before {
+    &.vzhux:before {
       transform: rotateZ(-60deg) translateX(0px);
       transition-delay: 0.1s;
     }
 
-    &:active:before,
-    &:active:after {
-      transform: rotateZ(0deg);
-    }
+    //&:active:before,
+    //&:active:after {
+    //  transform: rotateZ(0deg);
+    //}
+    //
+    //&:active:before {
+    //  transition-delay: .1s;
+    //}
+  }
 
-    &:active:before {
-      transition-delay: .1s;
-    }
+  .scrollDown {
+    opacity:0;
+    transform: translateY(-20px);
+  }
+
+  .scrollDown.active {
+    transition: all ease-in-out 0.8s;
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -21,3 +21,25 @@ $(function () {
 $(function () {
     new WOW().init();
 });
+
+$(function () {
+    function f() {
+        $('.main .btn').addClass('vzhux');
+    }
+    function d() {
+        $('.main .scrollDown').addClass('active')
+    }
+
+    setTimeout(f, 1000);
+    setTimeout(d, 1500);
+});
+
+// $(function () {
+//     var $scheduleSect = $('.schedule');
+//
+//     $(window).on('scroll', function () {
+//         if ($(window).scrollTop() > ($scheduleSect.offset().top - $scheduleSect.outerHeight())) {
+//             $('.border').addClass('active');
+//         }
+//     })
+// });
