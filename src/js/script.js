@@ -26,6 +26,7 @@ $(function () {
     function f() {
         $('.main .btn').addClass('vzhux');
     }
+
     function d() {
         $('.main .scrollDown').addClass('active')
     }

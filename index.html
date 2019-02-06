@@ -21,9 +21,11 @@
         <section class="main">
             <div class="container">
                 <div class="main-wrap">
-                    <h1>мы женимся <span>вы смотрите</span></h1>
+                    <!--<h1>мы женимся <span>вы смотрите</span></h1>-->
+                    <h1>тут<span>главная новость</span></h1>
                     <a href="#date" class="btn scrollBtn">мм?</a>
-                    <a href="#date" class="scrollDown" style="color: #fff;font-size: 24px; margin-top: 40px;display: block;">↓</a>
+                    <a href="#date" class="scrollDown"
+                       style="color: #fff;font-size: 24px; margin-top: 40px;display: block;">↓</a>
                 </div>
             </div>
         </section>
@@ -43,10 +45,9 @@
             <div class="container">
                 <div class="border">
                     <h2>:::: Детали ::::</h2>
-                    <p>У нас будет маленькая церемония - она закончится сразу после ЗАГСа</p>
-                    <p>Вам даже не нужно приносить цветы - мы правда уедем на следующий день</p>
-                    <p>И дарить подарки - мы не устраиваем банкет</p>
-                    <p>Мы правда будем очень рады просто видеть <span>ВАС</span></p>
+                    <p>У нас будет маленькая церемония, но все-таки не без автерпати</p>
+                    <p>•</p>
+                    <p>17:00 мы перемещаемся в MERULA<br>Маяковского 52</p>
 
                     <!--<p style="font-size: 12px;opacity:0.8;">Самолет в Рейкъявик прибывает рано утром 17 апреля, где нас-->
                     <!--будет ждать тачка Citroen.</p>-->
@@ -203,6 +204,10 @@
             </div>
         </section>
 
+        <section class="map">
+            <div id="map"></div>
+        </section>
+
         <section class="contact">
             <div class="container">
                 <h2>Свяжись с нами в сетях</h2>
@@ -317,9 +322,253 @@
     </footer>
 </div>
 
+<script>
+    var map;
+
+    function initMap() {
+        var uluru = {lat: 59.943958, lng: 30.3568823};
+
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 59.943958, lng: 30.3568823},
+            zoom: 16,
+            mapTypeControl: false,
+            styles: [{
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#e9e9e9"
+                    },
+                    {
+                        "lightness": 17
+                    }
+                ]
+            },
+                {
+                    "featureType": "landscape",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#f5f5f5"
+                        },
+                        {
+                            "lightness": 20
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        },
+                        {
+                            "lightness": 17
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        },
+                        {
+                            "lightness": 29
+                        },
+                        {
+                            "weight": 0.2
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        },
+                        {
+                            "lightness": 18
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.local",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        },
+                        {
+                            "lightness": 16
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#f5f5f5"
+                        },
+                        {
+                            "lightness": 21
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#dedede"
+                        },
+                        {
+                            "lightness": 21
+                        }
+                    ]
+                },
+                {
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        },
+                        {
+                            "color": "#ffffff"
+                        },
+                        {
+                            "lightness": 16
+                        }
+                    ]
+                },
+                {
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "saturation": 36
+                        },
+                        {
+                            "color": "#333333"
+                        },
+                        {
+                            "lightness": 40
+                        }
+                    ]
+                },
+                {
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "transit",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#f2f2f2"
+                        },
+                        {
+                            "lightness": 19
+                        }
+                    ]
+                },
+                {
+                    "featureType": "administrative",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#fefefe"
+                        },
+                        {
+                            "lightness": 20
+                        }
+                    ]
+                },
+                {
+                    "featureType": "administrative",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "color": "#fefefe"
+                        },
+                        {
+                            "lightness": 17
+                        },
+                        {
+                            "weight": 1.2
+                        }
+                    ]
+                }]
+        });
+        var icons = {
+            start: {
+                icon: 'src/img/svg/palace.svg'
+            },
+            finish: {
+                icon: 'src/img/svg/mark.svg'
+            },
+            subway: {
+                icon: 'src/img/svg/metro.svg'
+            }
+        };
+
+        var features = [
+            {
+                position: new google.maps.LatLng(59.945161, 30.364796),
+                type: 'start'
+            },
+            {
+                position: new google.maps.LatLng(59.942943, 30.355352),
+                type: 'finish'
+            },
+            {
+                position: new google.maps.LatLng(59.944537, 30.360068),
+                type: 'subway'
+            }
+        ];
+
+        features.forEach(function (feature) {
+            var marker = new google.maps.Marker({
+                position: feature.position,
+                icon: icons[feature.type].icon,
+                map: map
+            });
+        });
+
+        var flightPlanCoordinates = [
+            {lat: 59.945161, lng: 30.364796},
+            {lat: 59.945224, lng: 30.359401},
+            {lat: 59.943938, lng: 30.359325},
+            {lat: 59.944010, lng: 30.355571},
+            {lat: 59.942987, lng: 30.355461}
+        ];
+        var flightPath = new google.maps.Polyline({
+            path: flightPlanCoordinates,
+            geodesic: true,
+            strokeColor: '#e44a3c',
+            strokeOpacity: 1.0,
+            strokeWeight: 2
+        });
+
+        flightPath.setMap(map);
+    }
+</script>
+
+
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoq4hsEIe8jD_IJNnU8dRsafXKOlHucoY&callback=initMap">
+</script>
 <script src="dist/js/script.min.js"></script>
+
 
 </body>
 </html>
