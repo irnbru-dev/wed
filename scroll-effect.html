@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wed scroll-effect</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700&amp;subset=cyrillic,cyrillic-ext"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+    <link rel="stylesheet" href="dist/svg/css/sprite.css">
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/css/style.min.css">
+</head>
+<body>
+
+<div class="one num1"></div>
+<div class="two num2"></div>
+<div class="three num3"></div>
+
+<style>
+    .one,
+    .two,
+    .two {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+    .one {
+        background: #f4656d;
+    }
+    .two {
+        background: #008eb3;
+    }
+    .three {
+        background: #a7e5e0;
+    }
+</style>
+
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoq4hsEIe8jD_IJNnU8dRsafXKOlHucoY&callback=initMap">
+</script>
+<script src="dist/js/script.min.js"></script>
+
+<script>
+    function slide() {
+        h = document.documentElement.clientHeight
+        $(".one, .two, .three, .four, .five").css('height', h);
+    };
+    $(window).resize(slide);
+    $(document).ready(slide);
+
+
+    $(document).bind('mousewheel DOMMouseScroll', function (event) {
+        scroll(event);
+    });
+
+    var num = 1;
+    var scrolling = false;
+
+    function scroll(event) {
+        event.preventDefault();
+        if (!scrolling) {
+            scrolling = true;
+            if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+                num--;
+                num = num < 1 ? 1 : num;
+            } else {
+                num++;
+                num = num > 5 ? 5 : num;
+            }
+
+            $('html, body').animate({
+                scrollTop: $(".num" + num).offset().top
+            }, 500, "linear", function () {
+                scrolling = false;
+            });
+        }
+    }
+</script>
+
+</body>
+</html>
